@@ -15,7 +15,7 @@ Demo project of Spring Cloud Stream with [Aliyun Kafka](https://help.aliyun.com/
 ### 1. SASL配置系统变量
 Aliyun Kafka采用SASL机制对通道进行鉴权，在此之前，需要配置JVM属性java.security.auth.login.config
 首先将src/main/resources/kafka_client_jaas.conf（注意配置自己的AccessKey，SecretKey）放置在某个路径下，如/home/admin；
-然后可以采用以下方式配置
+然后可以采用以下方式配置(二选一，建议采用第二种)
 #### 1.1 -D配置方式
 jvm启动时加上 -Djava.security.auth.login.config=/home/admin/kafka_client_jaas.conf
 #### 1.2 设置Spring的启动监听器
